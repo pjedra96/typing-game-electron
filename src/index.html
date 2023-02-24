@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
+    <link rel="icon" href="img/typing.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Typing Test</title>
+</head>
+<body>
+    <div class="container" id="page_container">
+        <h2 class="title"> Typing Speed Test</h2>
+        <label class="toggle" >
+            <input type="checkbox" id="colour_mode">
+            <span class="labels" dark="Dark" light="Light"></span>
+        </label>
+        <div class="stats">
+            <p>Time: <span id="timer">0s</span></p>
+            <p>Mistakes: <span id="mistakes">0</span></p>
+        </div>
+        <div id="quote" onmousedown="return false" onselectstart="return false"></div>
+
+        <textarea id="user-input" rows="3" placeholder="Type here when test starts..."></textarea>
+
+        <div class="buttons">
+            <div id="new_quote_checkbox">
+                <input type="checkbox" name="checkbox" id="new_quote">
+                <label for="new_quote" id="new_quote_label">New Quote ?</label>
+            </div>
+            <button id="start-test" onclick="startTest()">Start Test</button>
+            <button id="stop-test" onclick="displayResult()">Stop Test</button>
+        </div>
+
+        <div class="result">
+            <h3>Result</h3>
+            <div class="wrapper">
+                <p>Accuracy: <span id="accuracy"></span></p>
+                <p>Speed: <span id="wpm"></span></p>
+            </div>
+        </div>
+
+    </div>
+    <!-- JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="typing.js"></script>
+</body>
+</html>
